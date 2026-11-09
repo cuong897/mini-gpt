@@ -1,0 +1,9 @@
+torch==2.6.0+cu124
+numpy==2.4.6
+tokenizers==0.22.2
+datasets==4.8.5
+huggingface-hub==1.19.0
+tensorboard==2.21.0
+matplotlib==3.11.0
+psutil==7.2.2
+pytest==9.2.0

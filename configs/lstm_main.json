@@ -1,0 +1,7 @@
+{
+  "model": "lstm", "kind": "main", "seed": 42, "deterministic": true,
+  "architecture": {"context": 256, "embedding_dim": 256, "hidden_dim": 512, "layers": 2, "dropout": 0.1},
+  "batch_size": 8, "accumulation": 4, "max_steps": 20000, "max_tokens": 20000000,
+  "learning_rate": 0.001, "warmup_steps": 100, "weight_decay": 0.01,
+  "grad_clip": 1.0, "precision": "bf16", "eval_every": 250, "log_every": 10, "cpu_threads": 2
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phòng viết · Mini-GPT</title>
+  <link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+<main>
+  <header><a class="brand" href="/">m<span>·</span>gpt <small>PHÒNG VIẾT</small></a><span class="local"><i></i> Chạy trên máy của bạn</span></header>
+  <section class="intro"><p class="eyebrow">DEMO MÔ HÌNH NGÔN NGỮ TIẾNG VIỆT</p><h1>Một đoạn mở đầu.<br>Ba cách viết tiếp.</h1><p>Khám phá văn bản sinh từ N-gram, LSTM và mini-GPT tự huấn luyện.</p></section>
+  <form id="form">
+    <div class="form-top"><label for="prompt">Bạn muốn bắt đầu thế nào?</label><select id="preset" aria-label="Bộ checkpoint"></select></div>
+    <textarea id="prompt" maxlength="4000" rows="3" required>Việt Nam là một quốc gia</textarea>
+    <div class="suggestions"><span>Thử một ý tưởng</span><button type="button" data-prompt="Trong khu vườn nhỏ,">Khu vườn nhỏ</button><button type="button" data-prompt="Khoa học và công nghệ đã">Khoa học</button><button type="button" data-prompt="Sông Mekong chảy qua">Sông Mekong</button></div>
+    <fieldset id="choices"><legend>Mô hình sẽ viết tiếp</legend></fieldset>
+    <details><summary>Tùy chỉnh cách sinh văn bản</summary><div class="settings">
+      <label>Token mới tối đa<input id="max_new_tokens" type="number" min="1" max="200" value="80" required></label>
+      <label>Temperature<input id="temperature" type="number" min="0" max="2" step="0.1" value="0.8" required></label>
+      <label>Top-k<input id="top_k" type="number" min="0" max="8000" value="40" required></label>
+      <label>Top-p<input id="top_p" type="number" min="0.01" max="1" step="0.01" value="0.9" required></label>
+      <label>Seed<input id="seed" type="number" min="0" max="4294967295" value="42" required></label>
+    </div><p class="hint">Temperature = 0: chọn token có xác suất cao nhất. Top-k = 0: tắt lọc top-k. Giới hạn tính theo token, không phải số từ.</p></details>
+    <p class="notice" id="notice"></p>
+    <div class="actions"><span id="status" role="status" aria-live="polite">Đang kiểm tra các mô hình…</span><button id="submit" class="primary" disabled>Sinh văn bản <span>↗</span></button></div>
+  </form>
+  <section class="output-section" aria-label="Văn bản sinh"><div class="output-heading"><h2>Ba góc nhìn, cùng một mở đầu</h2><button id="download" type="button" hidden>Tải kết quả JSON ↓</button></div><div id="results" class="results"></div></section>
+  <footer>Mô hình nhỏ, huấn luyện từ đầu. Văn bản có thể lặp, thiếu logic hoặc chứa thông tin sai.</footer>
+</main>
+</body></html>

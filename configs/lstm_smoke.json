@@ -1,0 +1,7 @@
+{
+  "model": "lstm", "kind": "smoke", "seed": 42, "deterministic": true,
+  "architecture": {"context": 32, "embedding_dim": 32, "hidden_dim": 48, "layers": 1, "dropout": 0.1},
+  "batch_size": 4, "accumulation": 2, "max_steps": 20, "max_tokens": 4096,
+  "learning_rate": 0.003, "warmup_steps": 2, "weight_decay": 0.01,
+  "grad_clip": 1.0, "precision": "fp32", "eval_every": 10, "log_every": 5, "cpu_threads": 2
+}

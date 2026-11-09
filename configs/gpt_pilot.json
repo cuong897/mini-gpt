@@ -1,0 +1,7 @@
+{
+  "model": "gpt", "kind": "pilot", "seed": 42, "deterministic": true,
+  "architecture": {"context": 256, "dim": 384, "layers": 6, "heads": 6, "dropout": 0.1, "tie_weights": true},
+  "batch_size": 4, "accumulation": 2, "max_steps": 100, "max_tokens": 16384,
+  "learning_rate": 0.0003, "warmup_steps": 2, "weight_decay": 0.1,
+  "grad_clip": 1.0, "precision": "bf16", "eval_every": 10, "log_every": 1, "cpu_threads": 2
+}

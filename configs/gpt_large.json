@@ -1,0 +1,7 @@
+{
+  "model": "gpt", "kind": "main", "seed": 42, "deterministic": true,
+  "architecture": {"context": 256, "dim": 512, "layers": 8, "heads": 8, "dropout": 0.1, "tie_weights": true},
+  "batch_size": 8, "accumulation": 4, "max_steps": 20000, "max_tokens": 20000000,
+  "learning_rate": 0.0003, "warmup_steps": 100, "weight_decay": 0.1,
+  "grad_clip": 1.0, "precision": "bf16", "eval_every": 250, "log_every": 10, "cpu_threads": 2
+}
